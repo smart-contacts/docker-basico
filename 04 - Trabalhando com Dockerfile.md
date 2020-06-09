@@ -114,7 +114,7 @@ $ docker run -d -p 3000:3333 smartcontacts/nodecustom:v1
 
 ### Publicando imagem no Docker Hub
 
-O Docker Hub é um repositório onde você pode disponibilizar suas imagems. Para isso você precisa realizar o login no shell usando as credenciais criadas no site do Docker Hub, conforme comando a seguir:
+O Docker Hub é um repositório onde você pode disponibilizar suas imagens. Para isso você precisa realizar o login no shell usando as credenciais criadas no site do Docker Hub, conforme comando a seguir:
 
 ```
 $ docker login

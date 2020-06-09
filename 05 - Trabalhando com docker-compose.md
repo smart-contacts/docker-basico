@@ -11,7 +11,7 @@ Informação sobre tecnologia, dicas, tutoriais, mini-cursos e muito mais.
 
 ### O que é o docker-compose?
 
-O **docker-compose** é uma ferramenta cujo o objetivo é facilitar o processo de executação de containers docker de forma declarativa. Cada container é executado como um serviço.
+O **docker-compose** é uma ferramenta cujo o objetivo é facilitar o processo de execução de containers docker de forma declarativa. Cada container é executado como um serviço.
 
 O arquivo para criar as instruções para o docker-compose deve ser nomeado como ```docker-compose.yml``` ou ```docker-compose.yaml```.
 
