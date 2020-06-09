@@ -43,15 +43,13 @@ Uma imagem inclui tudo que é necessário para executar um aplicativo - o códig
 
 > Acesse o [Docker Hub](https://hub.docker.com) para mais detalhes sobre imagens docker.
 
-![Arquitetura](../src/images/docker2.svg)
-
 ### Containers e Máquinas Virtuais
 
 Um container é executado nativamente no Linux e compartilha o kernel da máquina host com outros containers.
 
 Por outro lado, uma máquina virtual (VM) executa um sistema operacional "convidado" completo com acesso virtual a recursos de host por meio de um hipervisor.
 
-![Containers vs VMs](../src/images/docker.png)
+![Containers vs VMs](https://smartcontacts.com.br/assets/img/docker.png)
 
 > Imagem retirada de: http://imesh.github.io/images/contvsvm.png
 
