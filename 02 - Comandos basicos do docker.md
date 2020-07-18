@@ -13,6 +13,8 @@ Basicamente, um container é criado a partir de uma imagem docker. O repositóri
 
 > Crie uma conta no Docker Hub para que você possa enviar as imagens que você criar a partir de containers que você utilizará no seu dia a dia como desenvolvedor. Veremos isso aqui nessa série.
 
+> Evite usar imagem que não seja Oficial.
+
 ### Containers
 
 Executar um container:
@@ -48,7 +50,7 @@ $ docker run -p 8080:80 nginx
 Rodar o container do nginx denominado webserver em segundo plano, deixando o terminal disponível para uso:
 
 ```
-$ docker run -d -p 8080:80 --name webserver nginx
+$ docker run --name webserver -p 8080:80 -d nginx
 ```
 
 Criar um novo container com a imagem baixada **mongo** que foi baixada no primeiro exemplo:
@@ -63,6 +65,12 @@ Excluir um container do seu PC:
 $ docker rm <id ou nome do container>
 
 Caso não seja possível excluir o container no momento você pode usar a opção -f para forçar
+```
+
+Exibir os logs de um container pode ajudar a investigar possíveis problemas ao tentar rodar um container:
+
+```
+$ docker logs <id ou nome do container>
 ```
 
 > Você pode usar ```docker rm --help``` para consultar as opções disponíveis para usar. O ```--help``` se aplica para qualquer comando do Docker.

@@ -21,12 +21,12 @@ $ docker exec -it webserver /bin/bash
 A opção -it permite interagir com o shell do container (/bin/bash)
 ```
 
-A partir desse tipo de acesso, pode-se fazer modificações no container, instalar pacotes e bibliotecas, etc. Depois de realizar as modificações necessárias é possível criar uma imagem a partir desse container que foi customizado. Veja o exemplo abaixo:
+A partir desse tipo de acesso, pode-se fazer modificações no container, instalar pacotes e bibliotecas, etc. Depois de realizar as modificações necessárias é possível criar uma imagem a partir desse container que foi customizado.
+
+Criação de uma nova imagem customizada:
 
 ```
 $ docker commit webserver smartcontacts/nginxcustom:v1
-
-Criação de uma nova imagem customizada
 ```
 
 Criando um novo container com base na imagem criada no exemplo acima:

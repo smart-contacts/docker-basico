@@ -41,7 +41,7 @@ diretório base da imagem, definido no comando anterior
 COPY package*.json ./
 
 executar o comando indicado, no diretório base da imagem
-no caso, o comando irá instalar tudo estiver configurado no package.json
+no caso, o comando irá instalar tudo que estiver configurado no package.json
 
 RUN npm install
 
@@ -106,7 +106,7 @@ Construir uma imagem a partir de um Dockerfile:
 $ docker build -t smartcontacts/nodecustom:v1 .
 ```
 
-Rodar o container:
+Rodar um container usando a imagem criada:
 
 ```
 $ docker run -d -p 3000:3333 smartcontacts/nodecustom:v1

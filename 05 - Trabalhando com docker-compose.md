@@ -52,7 +52,7 @@ volumes:
 
 A instrução **volumes** é útil para você manter na sua máquina local arquivos usados no container, mesmo após o encerramento da execução desse container. No exemplo acima, o diretório local da sua máquina denominado "db_data" está sendo mapeado com o diretório do banco de dados do container.
 
-O diretório "db_data" deve ser criado na sua máquina no mesmo local do arquivo **docker-compose.yaml**.
+De acordo com o exemplo acima. o diretório "db_data" deve ser criado na sua máquina no mesmo local do arquivo **docker-compose.yaml**.
 
 #### networks
 

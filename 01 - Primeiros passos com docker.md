@@ -13,11 +13,9 @@ Informação sobre tecnologia, dicas, tutoriais, mini-cursos e muito mais.
 
 ### O que é Docker?
 
-O Docker é uma plataforma para o desenvolvedor e/ou administrador de sistemas: criar, executar e compartilhar aplicativos em **containers**. O uso de containers para implantar aplicativos é chamado de conteinerização.
+O Docker é uma plataforma para o desenvolvedor e/ou administrador de sistemas: criar, executar e compartilhar aplicativos em **containers**.
 
-O docker foi feito para rodar no Linux. Logo, o melhor comportamento você encontrará rodando no Linux, apesar de poder instalar e usar tanto em Windows quanto em macOS.
-
-> Para rodar o Docker no Windows você precisará da versão Professional, que contém o Hyper-V. Para rodar no Windows Home, você terá que usar um recurso adicional, que é a ToolBox.
+> O docker foi feito para rodar no Linux. Logo, o melhor comportamento você encontrará rodando no Linux, apesar de poder instalar e usar tanto em Windows quanto em macOS.
 
 O container é:
 
@@ -35,9 +33,9 @@ O container é:
 
 ### Imagens e Containers
 
-Fundamentalmente, um container não passa de um processo em execução, com alguns recursos adicionais de encapsulamento aplicados a ele para mantê-lo isolado do host e de outros containers.
+Fundamentalmente, um container não passa de um processo em execução, com alguns recursos adicionais de encapsulamento aplicados a ele, para mantê-lo isolado do host e de outros containers.
 
-Um dos aspectos mais importantes desse isolamento  é que cada container interage com seu próprio sistema de arquivos privado; esse sistema de arquivos é fornecido por uma imagem do Docker.
+Um dos aspectos mais importantes desse isolamento é que cada container interage com seu próprio sistema de arquivos privado; esse sistema de arquivos é fornecido por uma imagem do Docker.
 
 Uma imagem inclui tudo que é necessário para executar um aplicativo - o código ou binário, dependências e quaisquer outros objetos necessários.
 
@@ -47,15 +45,17 @@ Uma imagem inclui tudo que é necessário para executar um aplicativo - o códig
 
 Um container é executado nativamente no Linux e compartilha o kernel da máquina host com outros containers.
 
-Por outro lado, uma máquina virtual (VM) executa um sistema operacional "convidado" completo com acesso virtual a recursos de host por meio de um hipervisor.
+Por outro lado, uma máquina virtual (VM) executa um sistema operacional "convidado" completo com acesso virtual a recursos de host por meio de um hypervisor.
 
-![Containers vs VMs](https://smartcontacts.com.br/assets/img/docker.png)
+![Containers vs Máquinas Virtuais](https://smartcontacts.com.br/assets/img/docker.png)
 
 > Imagem retirada de: http://imesh.github.io/images/contvsvm.png
 
 ### Baixar e Instalar o Docker
 
 A documentação do Docker tem com detalhes os passos necessários para a instalação seja em Linux, macOS ou Windows.
+
+> Aqui nesta série, estaremos instalando e utilizando o Docker no Linux Ubuntu versão 20.04.
 
 Para ver mais detalhes sobre instalação acesse a documentação:
 
@@ -64,8 +64,6 @@ Para ver mais detalhes sobre instalação acesse a documentação:
 - Instalar no [Windows](https://docs.docker.com/docker-for-windows/install/)
 
 - Instalar no [Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
-
-> Aqui nesta série, estaremos utilizando o Linux Ubuntu versão 20.04.
 
 ### Instalando Docker no Ubuntu
 
@@ -79,7 +77,9 @@ $ sudo apt-get remove docker docker-engine docker.io containerd runc
 
 ```
 $ sudo apt-get update
+```
 
+```
 $ sudo apt-get install \
     apt-transport-https \
     ca-certificates \
@@ -88,12 +88,16 @@ $ sudo apt-get install \
     software-properties-common
 
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
 
+```
 $ sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
+```
 
+```
 $ sudo apt-get update
 ```
 
@@ -111,7 +115,7 @@ Execute o comando abaixo no seu terminal para verificar se o docker já está di
 $ sudo docker run hello-world
 ```
 
-A saída desse comando será:
+A saída desse comando será parecida com o conteúdo abaixo:
 
 ```
 Hello from Docker!
